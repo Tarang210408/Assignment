@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  background-color: #050505;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #050505;
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #ff4d8d, #ff8c42);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-bg {
+  background: linear-gradient(90deg, #ff4d8d, #ff8c42);
+}
+
+.gradient-border-button {
+  position: relative;
+  background: #050505;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  color: #ffffff;
+}
+
+.gradient-border-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  margin: -2px;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #7c5dff, #ff4d8d, #ff8c42);
+}
+
+.animate-spin-slow {
+  animation: spin 9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+::selection {
+  background: #ff4d8d;
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2b2b2b;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b3b3b;
+}
+
